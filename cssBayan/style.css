@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+h1, h3, img {
+  padding: 5px 0;
+}
+body{
+  background-color: rgb(136, 183, 66);
+  display: flex;
+  justify-content: center;
+}
+main {
+  width: 50%;
+  /* border: 2px solid black; */
+}
+.mem-wrapper{
+  border-bottom: 1px solid black;
+}
+
+.mem-wrapper-content { 
+ display: flex;
+ justify-content: center;
+}
+img {
+  width: 80%;
+}
+/* создание крестика */
+.mem-wrapper-name{
+  position: relative;
+}
+
+.icon {
+  cursor: pointer; 
+  position: absolute; 
+  top: 15px; 
+  right: 20px;
+}
+.icon:before, .icon:after {
+  content: ""; 
+  position: absolute; 
+  width: 15px; 
+  height: 3px;
+  background: black;
+}
+.icon:before { 
+  transform: rotate(90deg);
+}
+.icon:after {
+  transform: rotate(0deg);
+}
+
+.icon:active::after  {
+  transform: rotate(45deg);
+}
+.icon:active::before  {
+  transform: rotate(-45deg);
+}
+
+
+/* создание крестика */
+
+
+/* @media (min-width: 640px) and (max-width: 999px) { */
