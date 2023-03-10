@@ -3,21 +3,23 @@
   margin: 0;
 }
 h1, h3, img {
-  padding: 0.3rem 0;
+  padding: 0.9rem 0;
 }
 body{
-  background-color: rgb(136, 183, 66);
+
   display: flex;
   justify-content: center;
+  background: bisque;
 }
 main {
-  width: 50%;
+  background-color: rgb(131, 149, 104);
+  margin: 5rem;
+  width: 70%;
   /* border: 2px solid black; */
 }
 .mem-wrapper{
-  border-bottom: 0.08rem solid black;
+  border-bottom: 0.08rem solid rgb(24, 106, 161);
 }
-
 
 img {
   width: 80%;
@@ -44,27 +46,24 @@ align-items: center;
 
 .mem-wrapper-content,
 .close-icon,
+.open-icon,
 input[type="checkbox"] {
   display: none;
+}
+
+main:hover .open-icon {
+  display: flex;
 }
 
 input[type="checkbox"]:checked ~ .mem-wrapper-content {
   display: flex;
 }
-input[type="checkbox"]:checked ~ .mem-wrapper-name .icon .close-icon {
+main:hover input[type="checkbox"]:checked ~ .mem-wrapper-name .icon .close-icon {
   display: flex;
 }
-input[type="checkbox"]:checked ~ .mem-wrapper-name .icon .open-icon {
+main:hover input[type="checkbox"]:checked ~ .mem-wrapper-name .icon .open-icon {
   display: none;
 }
 
-/* У тебя есть строка с id="row"
-Она связана с радиокнопкой
-В это строке у тебя есть иконка с классом "icon_expanded" и "icon_collapsed"
-Ты пишешь #row:checked .icon_expanded { display: visible }
-#row:checked .icon_collapsed { display: none } */
-
-
-
-
-/* @media (min-width: 640px) and (max-width: 999px) { */
+/* вставляем в гитбаш */
+/* $  git commit --amend -m "feat: add checked `LANG=en_EN date +'(%a, %b %d, %Y %r)'`" */
