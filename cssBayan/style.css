@@ -2,33 +2,52 @@
   padding: 0;
   margin: 0;
 }
-h1, h3, img {
-  padding: 0.9rem 1rem;
+
+h1,
+h3,
+img {
+  padding: 0.3rem 0.4rem;
 }
 
-h3:hover, .icon:hover, .mem-wrapper-content:hover, .mem-wrapper-name:hover, .mem-wrapper-content1:hover, .mem-wrapper-name1:hover  {
+h3:hover,
+.icon:hover,
+.mem-wrapper-content:hover,
+.mem-wrapper-name:hover {
   cursor: pointer;
 }
 
-h3:active, .icon:active, .mem-wrapper-content:active, .mem-wrapper-content1:active, .mem-wrapper-name:active, .mem-wrapper-name1:active {
+h3:active,
+.icon:active,
+.mem-wrapper-content:active,
+.mem-wrapper-name:active {
   cursor: pointer;
+}
+
+h1 {
+  font-size: 1.3rem;
 }
 
 h3 {
-  height: 1.5rem;
+  font-size: 0.8rem;
+  height: 2.5rem;
+  width: 60%;
+  display: inline-flex;
+  align-items: center;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   background: bisque;
 }
+
 main {
   background-color: rgb(131, 149, 104);
   padding: 5rem;
   width: 70%;
 }
-.mem-wrapper, .mem-wrapper1 {
+
+.mem-wrapper {
   border-bottom: 0.08rem solid rgb(24, 106, 161);
 }
 
@@ -36,106 +55,116 @@ img {
   width: 80%;
 }
 
-.mem-wrapper-name, .mem-wrapper-name1{
+.mem-wrapper-name {
   display: flex;
   justify-content: space-between;
 }
 
-.icon, .icon1 {
-display: flex;
-justify-content: center;
-align-items: center;
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .icon img {
   cursor: pointer;
 }
-.icon1 img {
-  cursor: pointer;
-}
 
-.mem-wrapper-content, .mem-wrapper-content1 { 
+.mem-wrapper-content {
   display: flex;
   justify-content: center;
- }
+  animation-name: Anime;
+  animation-duration: 1.0s;
+}
 
 .mem-wrapper-content,
 .close-icon,
 .open-icon,
-input[type="checkbox"] {
+input[type="radio"] {
   display: none;
 }
+
 main:hover .open-icon {
   display: flex;
 }
 
-input[type="checkbox"]:checked ~ .mem-wrapper-content {
+input[type="radio"]:checked~.mem-wrapper-content {
   display: flex;
 }
 
-input[type="checkbox"]:checked ~ .mem-wrapper-name h3 {
+input[type="radio"]:checked~.mem-wrapper-name h3 {
   color: rgb(87, 91, 213);
-  transition-duration: 0.3s;
 }
 
-main:hover input[type="checkbox"]:checked ~ .mem-wrapper-name .icon .close-icon {
+main:hover>* h3 {
+  color: black !important;
+}
+
+main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .close-icon {
   display: flex;
 }
-main:hover input[type="checkbox"]:checked ~ .mem-wrapper-name .icon .open-icon {
+
+main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
   display: none;
 }
 
 .mem-wrapper:hover .mem-wrapper-content {
   display: flex;
 }
+
 .mem-wrapper:hover .close-icon {
   display: flex;
 }
+
 .mem-wrapper:hover .open-icon {
   display: none;
-} 
-/* для первого */
-
-.close-icon1,
-.open-icon1 {
-  display: none;
 }
 
-main:hover .close-icon1 {
-  display: flex;
+/*анимация*/
+@keyframes Anime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-.mem-wrapper-name1 h3 {
-  color: rgb(87, 91, 213);
-}
-#button-open:checked ~ .mem-wrapper-content1 {
-  display: none;
-}
-#button-open:checked ~ .mem-wrapper-name1 h3 {
-  color: black;
-  transition-duration: 0.3s;
-}
-#button-open:checked ~ .mem-wrapper-name1 h3 {
-  color: black;
-  transition-duration: 0.3s;
+@media (min-width: 820px) and (max-width: 1919px) {
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 90%;
+  }
+
+  .icon img {
+    width: 1.5rem;
+  }
 }
 
-main:hover #button-open:checked ~ .mem-wrapper-name1 .icon1 .close-icon1 {
-  display: none;
-}
-main:hover #button-open:checked ~ .mem-wrapper-name1 .icon1 .open-icon1 {
-  display: flex;
-}
+@media (min-width: 1920px) {
 
-.mem-wrapper1:hover .mem-wrapper-content1 {
-  display: flex !important;
-} 
+  h1 {
+    font-size: 3.5rem;
+  }
 
- .mem-wrapper1:hover .mem-wrapper-name1 .icon1 .close-icon1 {
-  display: flex !important;
-}
-.mem-wrapper1:hover .mem-wrapper-name1 .icon1 .open-icon1 {
-  display: none !important;
+  h3 {
+    font-size: 2.5rem;
+    height: 3.5rem;
+    width: 80%;
+  }
+
+  .icon img {
+    width: 3rem;
+  }
 }
 
 /* вставляем в гитбаш */
+/*mobile 320x568, tablet 820x1180, desktop 1920×1080;*/
 /* $  git commit --amend -m "feat: add checked `LANG=en_EN date +'(%a, %b %d, %Y %r)'`" */
