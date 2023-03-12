@@ -4,23 +4,8 @@
 }
 
 h1,
-h3,
-img {
+h3 {
   padding: 0.3rem 0.4rem;
-}
-
-h3:hover,
-.icon:hover,
-.mem-wrapper-content:hover,
-.mem-wrapper-name:hover {
-  cursor: pointer;
-}
-
-h3:active,
-.icon:active,
-.mem-wrapper-content:active,
-.mem-wrapper-name:active {
-  cursor: pointer;
 }
 
 h1 {
@@ -51,8 +36,10 @@ main {
   border-bottom: 0.08rem solid rgb(24, 106, 161);
 }
 
-img {
-  width: 80%;
+.mem-wrapper-content img {
+  margin-bottom: 0.3rem;
+  width: 0%;
+  transition: 0.5s;
 }
 
 .mem-wrapper-name {
@@ -77,48 +64,20 @@ img {
   animation-duration: 1.0s;
 }
 
-.mem-wrapper-content,
 .close-icon,
 .open-icon,
 input[type="radio"] {
   display: none;
 }
 
-main:hover .open-icon {
-  display: flex;
-}
-
-input[type="radio"]:checked~.mem-wrapper-content {
-  display: flex;
+input[type="radio"]:checked~.mem-wrapper-content img {
+  width: 80%;
 }
 
 input[type="radio"]:checked~.mem-wrapper-name h3 {
   color: rgb(87, 91, 213);
 }
 
-main:hover>* h3 {
-  color: black !important;
-}
-
-main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .close-icon {
-  display: flex;
-}
-
-main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
-  display: none;
-}
-
-.mem-wrapper:hover .mem-wrapper-content {
-  display: flex;
-}
-
-.mem-wrapper:hover .close-icon {
-  display: flex;
-}
-
-.mem-wrapper:hover .open-icon {
-  display: none;
-}
 
 /*анимация*/
 @keyframes Anime {
@@ -146,6 +105,49 @@ main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
   .icon img {
     width: 1.5rem;
   }
+
+  h3:hover,
+  .icon:hover,
+  .mem-wrapper-content:hover,
+  .mem-wrapper-name:hover {
+    cursor: pointer;
+  }
+
+  h3:active,
+  .icon:active,
+  .mem-wrapper-content:active,
+  .mem-wrapper-name:active {
+    cursor: pointer;
+  }
+
+  main:hover .open-icon {
+    display: flex;
+  }
+
+  main:hover>* h3 {
+    color: black !important;
+  }
+
+  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .close-icon {
+    display: flex;
+  }
+
+  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
+    display: none;
+  }
+
+  .mem-wrapper:hover .mem-wrapper-content img {
+    width: 80%;
+  }
+
+  .mem-wrapper:hover .close-icon {
+    display: flex;
+  }
+
+  .mem-wrapper:hover .open-icon {
+    display: none;
+  }
+
 }
 
 @media (min-width: 1920px) {
@@ -163,6 +165,49 @@ main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
   .icon img {
     width: 3rem;
   }
+
+  h3:hover,
+  .icon:hover,
+  .mem-wrapper-content:hover,
+  .mem-wrapper-name:hover {
+    cursor: pointer;
+  }
+
+  h3:active,
+  .icon:active,
+  .mem-wrapper-content:active,
+  .mem-wrapper-name:active {
+    cursor: pointer;
+  }
+
+  main:hover .open-icon {
+    display: flex;
+  }
+
+  main:hover>* h3 {
+    color: black !important;
+  }
+
+  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .close-icon {
+    display: flex;
+  }
+
+  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
+    display: none;
+  }
+
+  .mem-wrapper:hover .mem-wrapper-content img {
+    width: 80%;
+  }
+
+  .mem-wrapper:hover .close-icon {
+    display: flex;
+  }
+
+  .mem-wrapper:hover .open-icon {
+    display: none;
+  }
+
 }
 
 /* вставляем в гитбаш */
