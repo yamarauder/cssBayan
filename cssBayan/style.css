@@ -105,49 +105,6 @@ input[type="radio"]:checked~.mem-wrapper-name h3 {
   .icon img {
     width: 1.5rem;
   }
-
-  h3:hover,
-  .icon:hover,
-  .mem-wrapper-content:hover,
-  .mem-wrapper-name:hover {
-    cursor: pointer;
-  }
-
-  h3:active,
-  .icon:active,
-  .mem-wrapper-content:active,
-  .mem-wrapper-name:active {
-    cursor: pointer;
-  }
-
-  main:hover .open-icon {
-    display: flex;
-  }
-
-  main:hover>* h3 {
-    color: black !important;
-  }
-
-  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .close-icon {
-    display: flex;
-  }
-
-  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
-    display: none;
-  }
-
-  .mem-wrapper:hover .mem-wrapper-content img {
-    width: 80%;
-  }
-
-  .mem-wrapper:hover .close-icon {
-    display: flex;
-  }
-
-  .mem-wrapper:hover .open-icon {
-    display: none;
-  }
-
 }
 
 @media (min-width: 1920px) {
@@ -165,7 +122,9 @@ input[type="radio"]:checked~.mem-wrapper-name h3 {
   .icon img {
     width: 3rem;
   }
+}
 
+@media (hover: hover) { 
   h3:hover,
   .icon:hover,
   .mem-wrapper-content:hover,
@@ -207,9 +166,5 @@ input[type="radio"]:checked~.mem-wrapper-name h3 {
   .mem-wrapper:hover .open-icon {
     display: none;
   }
-
 }
 
-/* вставляем в гитбаш */
-/*mobile 320x568, tablet 820x1180, desktop 1920×1080;*/
-/* $  git commit --amend -m "feat: add checked `LANG=en_EN date +'(%a, %b %d, %Y %r)'`" */
