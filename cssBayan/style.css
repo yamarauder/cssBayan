@@ -51,6 +51,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
 }
 
 .icon img {
@@ -102,7 +103,7 @@ input[type="radio"]:checked~.mem-wrapper-name h3 {
     width: 90%;
   }
 
-  .icon img {
+  .icon div {
     width: 1.5rem;
   }
 }
@@ -143,7 +144,7 @@ input[type="radio"]:checked~.mem-wrapper-name h3 {
     display: flex;
   }
 
-  main:hover>* h3 {
+  main:hover > * h3 {
     color: black !important;
   }
 
@@ -166,5 +167,17 @@ input[type="radio"]:checked~.mem-wrapper-name h3 {
   .mem-wrapper:hover .open-icon {
     display: none;
   }
+
+  .mem-wrapper:active img {
+    opacity: 0.5;
+  }
+
+  .mem-wrapper:active .icon div {
+    color: rgb(87, 91, 213);
+  }
+  .mem-wrapper:active h3 {
+    color: rgb(87, 91, 213) !important;
+  }
+
 }
 
