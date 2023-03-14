@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h3 {
+  padding: 0.3rem 0.4rem;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+  height: 2.5rem;
+  width: 60%;
+  display: inline-flex;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: bisque;
+}
+
+main {
+  background-color: rgb(131, 149, 104);
+  padding: 5rem;
+  width: 70%;
+}
+
+.mem-wrapper {
+  border-bottom: 0.08rem solid rgb(24, 106, 161);
+}
+
+.mem-wrapper-content img {
+  margin-bottom: 0.3rem;
+  width: 0%;
+  transition: 0.5s;
+}
+
+.mem-wrapper-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.icon img {
+  cursor: pointer;
+}
+
+.mem-wrapper-content {
+  display: flex;
+  justify-content: center;
+  animation-name: Anime;
+  animation-duration: 1.0s;
+}
+
+.close-icon,
+.open-icon,
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked~.mem-wrapper-content img {
+  width: 80%;
+}
+
+input[type="radio"]:checked~.mem-wrapper-name h3 {
+  color: rgb(87, 91, 213);
+}
+
+
+/*анимация*/
+@keyframes Anime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1919px) {
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 90%;
+  }
+
+  .icon div {
+    width: 1.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    height: 3.5rem;
+    width: 80%;
+  }
+
+  .icon img {
+    width: 3rem;
+  }
+}
+
+@media (hover: hover) { 
+  h3:hover,
+  .icon:hover,
+  .mem-wrapper-content:hover,
+  .mem-wrapper-name:hover {
+    cursor: pointer;
+  }
+
+  h3:active,
+  .icon:active,
+  .mem-wrapper-content:active,
+  .mem-wrapper-name:active {
+    cursor: pointer;
+  }
+
+  main:hover .open-icon {
+    display: flex;
+  }
+
+  main:hover > * h3 {
+    color: black !important;
+  }
+
+  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .close-icon {
+    display: flex;
+  }
+
+  main:hover input[type="radio"]:checked~.mem-wrapper-name .icon .open-icon {
+    display: none;
+  }
+
+  .mem-wrapper:hover .mem-wrapper-content img {
+    width: 80%;
+  }
+
+  .mem-wrapper:hover .close-icon {
+    display: flex;
+  }
+
+  .mem-wrapper:hover .open-icon {
+    display: none;
+  }
+
+  .mem-wrapper:active img {
+    opacity: 0.5;
+  }
+
+  .mem-wrapper:active .icon div {
+    color: rgb(87, 91, 213);
+  }
+  .mem-wrapper:active h3 {
+    color: rgb(87, 91, 213) !important;
+  }
+
+}
+
